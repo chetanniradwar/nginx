@@ -1,3 +1,3 @@
 FROM nginx:latest
-COPY .html/index.html /usr/share/html/index.html
-COPY .images/nginx.jpg /usr/share/images/nginx.jpg
+COPY ./html/index.html /usr/share/nginx/html/index.html
+COPY ./images/what-is-nginx.png /usr/share/nginx/images/what-is-nginx.png
