@@ -1,0 +1,13 @@
+services:
+  web:
+    build:
+      context: ./node/
+    ports:
+      - 4001:4001
+  nginx:
+    build: 
+      context: ./nginx/
+    ports:
+      - 4000:80
+    volumes:
+      - ./nginx/conf.d/:/etc/nginx/conf.d/

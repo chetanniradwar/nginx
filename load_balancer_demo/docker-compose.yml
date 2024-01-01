@@ -1,0 +1,18 @@
+services:
+  web1:
+    build:
+      context: ./node1/
+    ports:
+      - 6001:6001
+  web2:
+    build:
+      context: ./node2/
+    ports:
+      - 6002:6002
+  nginx:
+    build: 
+      context: ./nginx/
+    ports:
+      - 6003:80
+    volumes:
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
